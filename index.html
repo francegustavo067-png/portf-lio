@@ -156,9 +156,9 @@ footer a{margin:0 8px}
 .boot div{width:min(300px,80vw)}.boot i{display:block;height:8px;border:1px solid var(--neon);margin-top:8px}.boot i::after{content:"";display:block;height:100%;background:var(--neon);animation:ld .7s steps(8) forwards}
 @keyframes ld{from{width:0}to{width:100%}}
 /* Blur-in reveal (entrada apenas) */
-@keyframes blurIn{from{opacity:0;filter:blur(3px);transform:translateY(6px)}to{opacity:1;filter:blur(0);transform:none}}
-.rv:not(.in){opacity:0;filter:blur(3px)}
-.rv.in{animation:blurIn .7s cubic-bezier(.2,.7,.2,1) var(--d,0s) backwards}
+@keyframes blurIn{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+.rv:not(.in){opacity:0;transform:translateY(32px)}
+.rv.in{animation:blurIn .6s cubic-bezier(.2,.7,.2,1) var(--d,0s) backwards;will-change:opacity,transform}
 @media(max-width:860px){
 .menu{display:inline-flex}.top-cta{display:none}.tools .tool{display:none}.bar nav .navtools{display:flex;gap:10px;padding-top:10px;margin-top:4px;border-top:1px solid var(--bd)}.bar{grid-template-columns:1fr auto}.hero{height:calc(100svh - 56px);min-height:480px}.hc{bottom:26px}.hw{padding:0 20px}.tc{top:16px}.bar{padding:10px 20px}
 .bar nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:6px;background:var(--bg);border-bottom:1px solid var(--bd);padding:10px 24px}
